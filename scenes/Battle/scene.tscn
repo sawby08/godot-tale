@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c13jx3jmsrli7"]
+[gd_scene load_steps=24 format=3 uid="uid://c13jx3jmsrli7"]
 
 [ext_resource type="Texture2D" uid="uid://362xu8wpdij4" path="res://refs/main.png" id="1_h611s"]
 [ext_resource type="Texture2D" uid="uid://bg5shgne82qbe" path="res://assets/images/ui/bt/fight0.png" id="3_yuymj"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ca81pp6t4xslk" path="res://assets/images/ui/bt/item1.png" id="8_mjxyp"]
 [ext_resource type="Texture2D" uid="uid://bx6xos0vo3mq3" path="res://assets/images/ui/bt/mercy0.png" id="9_mybqf"]
 [ext_resource type="Texture2D" uid="uid://vokifxn7bsgy" path="res://assets/images/ui/bt/mercy1.png" id="10_prnle"]
+[ext_resource type="Script" uid="uid://4wcrqek8jbnx" path="res://scripts/stats.gd" id="11_qth17"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mv8ck"]
 shader = ExtResource("7_x3rrd")
@@ -118,6 +119,7 @@ outline_color = Color(0, 0, 0, 1)
 [node name="BattleScene" type="Node2D"]
 
 [node name="_refs" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(1, 1, 1, 0.498039)
 position = Vector2(320, 240)
 texture = ExtResource("1_h611s")
@@ -145,6 +147,7 @@ position = Vector2(555, 453)
 sprite_frames = SubResource("SpriteFrames_de4a8")
 
 [node name="Stats" type="Node2D" parent="."]
+script = ExtResource("11_qth17")
 
 [node name="HP" type="Sprite2D" parent="Stats"]
 material = SubResource("ShaderMaterial_vf2j1")
