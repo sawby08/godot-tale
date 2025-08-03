@@ -1,3 +1,6 @@
+extends Resource
+class_name EncounterStuff
+
 var enemies : Dictionary = {
 	"Enemy 1" = {
 		hp = 50,
@@ -23,4 +26,11 @@ var enemies : Dictionary = {
 		dodge = false,
 		scene_path = ''
 	}
+}
+
+var player : Dictionary = {
+	name = "twin",
+	love = 1,
+	hp = 20,
+	max = 20
 }
