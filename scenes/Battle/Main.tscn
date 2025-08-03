@@ -178,20 +178,12 @@ label_settings = SubResource("LabelSettings_yuymj")
 metadata/_edit_use_anchors_ = true
 
 [node name="Arena" type="StaticBody2D" parent="."]
-collision_priority = 999.0
 physics_material_override = SubResource("PhysicsMaterial_8uw0p")
 script = ExtResource("14_iu6bd")
-
-[node name="BlackOutline" type="Polygon2D" parent="Arena"]
-color = Color(0, 0, 0, 1)
-
-[node name="WhiteOutline" type="Polygon2D" parent="Arena"]
-
-[node name="Fill" type="Polygon2D" parent="Arena"]
-color = Color(0, 0, 0, 1)
 
 [node name="Collision" type="CollisionPolygon2D" parent="Arena"]
 build_mode = 1
 
 [node name="Soul" parent="." instance=ExtResource("15_8uw0p")]
 position = Vector2(320, 320)
+wall_min_slide_angle = 0.0

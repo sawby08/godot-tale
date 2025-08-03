@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://csbkj1igir6g7" path="res://scripts/soul.gd" id="1_70s05"]
 [ext_resource type="Texture2D" uid="uid://xmdm3n5xg168" path="res://assets/images/ut-heart.png" id="1_o1wnd"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_70s05"]
-radius = 8.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70s05"]
+size = Vector2(16, 16)
 
 [node name="Soul" type="CharacterBody2D"]
 motion_mode = 1
@@ -14,4 +14,4 @@ script = ExtResource("1_70s05")
 texture = ExtResource("1_o1wnd")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_70s05")
+shape = SubResource("RectangleShape2D_70s05")
