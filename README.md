@@ -1,2 +1,2 @@
-# godot-tale
-<p>another undertale battle engine made in godot 4.4. not really gonna go for an elegant presentation this time i'm just trying to familiarize myself with the engine LOL<p>
+# GodotTale
+<p>my second attempt at trying to make something in godot after i lost the first version of my engine. how rivetting!<br>i thought i'd try to learn godot again because it's popular and i'd like to code for people at some point so i'm trying to learn one of the most popular game engines. <br><br>no elegant presentation until i grow more confident in this engine (unlikely) and just godot in general<br><br>content warning if you hate bad code i guess 😭 i have a lot to learn and i intend to do so with this project<p>

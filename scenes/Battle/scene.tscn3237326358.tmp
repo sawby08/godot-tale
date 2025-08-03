@@ -1,0 +1,188 @@
+[gd_scene load_steps=25 format=3 uid="uid://c13jx3jmsrli7"]
+
+[ext_resource type="Texture2D" uid="uid://362xu8wpdij4" path="res://refs/main.png" id="1_h611s"]
+[ext_resource type="Texture2D" uid="uid://bg5shgne82qbe" path="res://assets/images/ui/bt/fight0.png" id="3_yuymj"]
+[ext_resource type="Texture2D" uid="uid://bfq425jngah6a" path="res://assets/images/ui/bt/fight1.png" id="4_qth17"]
+[ext_resource type="Texture2D" uid="uid://bh0mk827kvddj" path="res://assets/images/ui/bt/act0.png" id="5_iu6bd"]
+[ext_resource type="Texture2D" uid="uid://bvlio3hb2oqxa" path="res://assets/images/ui/bt/act1.png" id="6_lwve1"]
+[ext_resource type="FontFile" uid="uid://bcs7jnx2ddkep" path="res://assets/fonts/Mars_Needs_Cunnilingus.ttf" id="6_wwglt"]
+[ext_resource type="Texture2D" uid="uid://uf4ni7t5q40u" path="res://assets/images/ui/spr_hpname_0.png" id="7_24lh7"]
+[ext_resource type="Texture2D" uid="uid://cwlfemwi3vif0" path="res://assets/images/ui/bt/item0.png" id="7_de4a8"]
+[ext_resource type="Shader" uid="uid://cbvmyi2dig7qf" path="res://shaders/outline.gdshader" id="7_x3rrd"]
+[ext_resource type="Texture2D" uid="uid://ca81pp6t4xslk" path="res://assets/images/ui/bt/item1.png" id="8_mjxyp"]
+[ext_resource type="Texture2D" uid="uid://bx6xos0vo3mq3" path="res://assets/images/ui/bt/mercy0.png" id="9_mybqf"]
+[ext_resource type="Texture2D" uid="uid://vokifxn7bsgy" path="res://assets/images/ui/bt/mercy1.png" id="10_prnle"]
+[ext_resource type="Script" uid="uid://4wcrqek8jbnx" path="res://scripts/stats.gd" id="11_qth17"]
+[ext_resource type="Script" uid="uid://o2txgnm1agkb" path="res://arena.gd" id="14_iu6bd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mv8ck"]
+shader = ExtResource("7_x3rrd")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wwglt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_yuymj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qth17")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fuba3"]
+shader = ExtResource("7_x3rrd")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v43xd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_iu6bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lwve1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kcwxn"]
+shader = ExtResource("7_x3rrd")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qth17"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_de4a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mjxyp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfmhh"]
+shader = ExtResource("7_x3rrd")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_de4a8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mybqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_prnle")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vf2j1"]
+shader = ExtResource("7_x3rrd")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 2.0
+shader_parameter/pattern = 2
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+
+[sub_resource type="LabelSettings" id="LabelSettings_yuymj"]
+font = ExtResource("6_wwglt")
+font_size = 24
+outline_size = 9
+outline_color = Color(0, 0, 0, 1)
+
+[node name="BattleScene" type="Node2D"]
+
+[node name="_refs" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+position = Vector2(320, 240)
+scale = Vector2(1, 1)
+texture = ExtResource("1_h611s")
+
+[node name="Buttons" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="FIGHT" type="AnimatedSprite2D" parent="Buttons"]
+material = SubResource("ShaderMaterial_mv8ck")
+position = Vector2(87, 453)
+sprite_frames = SubResource("SpriteFrames_wwglt")
+
+[node name="ACT" type="AnimatedSprite2D" parent="Buttons"]
+material = SubResource("ShaderMaterial_fuba3")
+position = Vector2(240, 453)
+sprite_frames = SubResource("SpriteFrames_v43xd")
+
+[node name="ITEM" type="AnimatedSprite2D" parent="Buttons"]
+material = SubResource("ShaderMaterial_kcwxn")
+position = Vector2(400, 453)
+sprite_frames = SubResource("SpriteFrames_qth17")
+
+[node name="MERCY" type="AnimatedSprite2D" parent="Buttons"]
+material = SubResource("ShaderMaterial_jfmhh")
+position = Vector2(555, 453)
+sprite_frames = SubResource("SpriteFrames_de4a8")
+
+[node name="Stats" type="Node2D" parent="."]
+scale = Vector2(1, 1)
+script = ExtResource("11_qth17")
+
+[node name="HP" type="Sprite2D" parent="Stats"]
+material = SubResource("ShaderMaterial_vf2j1")
+position = Vector2(256, 410)
+texture = ExtResource("7_24lh7")
+
+[node name="Name" type="Label" parent="Stats"]
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 201.0
+offset_bottom = 424.0
+text = "braden   lv 1"
+label_settings = SubResource("LabelSettings_yuymj")
+metadata/_edit_use_anchors_ = true
+
+[node name="HpDisplay" type="Label" parent="Stats"]
+offset_left = 314.0
+offset_top = 400.0
+offset_right = 485.0
+offset_bottom = 424.0
+text = "20 / 20"
+label_settings = SubResource("LabelSettings_yuymj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Arena" type="Node2D" parent="."]
+script = ExtResource("14_iu6bd")
+
+[node name="BlackOutline" type="Polygon2D" parent="Arena"]
+color = Color(0, 0, 0, 1)
+
+[node name="WhiteOutline" type="Polygon2D" parent="Arena"]
+
+[node name="Fill" type="Polygon2D" parent="Arena"]
+color = Color(0, 0, 0, 1)
